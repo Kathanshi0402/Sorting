@@ -1,0 +1,12 @@
+n=int(input("Enter number of elements"))
+l=[]
+for i in range(0,n):
+    ele=eval(input("Enter a element"))   #To take elements
+    l.append(ele)
+print(l)
+for j in range(0,len(l)-1):
+    for k in range(0,len(l)-j-1):
+        if l[j]>l[j+1]:               #Check if the element is greater than the next element
+            l[j],l[j+1]=l[j+1],l[j]      #Swapping
+
+print(l)
