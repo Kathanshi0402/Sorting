@@ -1,0 +1,14 @@
+n=int(input("Enter number of elements"))
+l=[]
+for i in range(0,n):
+    ele=eval(input("Enter a element"))
+    l.append(ele)
+print(l)
+for j in range(len(l)):    #Select the minimum element in every iteration
+    min_ele=j      
+    for k in range(j+1,len(l)):
+        if l[k]<l[min_ele]:
+            min_ele=k
+            l[j],l[min_ele]=l[min_ele],l[j]   #Swapping
+
+print(l)
